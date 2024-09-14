@@ -7,7 +7,7 @@ function ajouterAnimation(animationProps) {
     });
 }
 
-function passerSouri() {
+function gestionnaireMouseOver() {
     maBoite.innerHTML = `<p class="text-center text-white fw-bold fs-2">Tu viens de passer sur mon domaine</p>`;
     maBoite.style.backgroundColor = "purple";
     ajouterAnimation({
@@ -16,7 +16,7 @@ function passerSouri() {
     });
 }
 
-function click() {
+function gestionnaireClick() {
     maBoite.innerHTML = `<p class="text-center text-white fw-bold fs-2">Tu viens de cliquer</p>`;
     maBoite.style.backgroundColor = "green";
     ajouterAnimation({
@@ -25,7 +25,7 @@ function click() {
     });
 }
 
-function doubleClick() {
+function gestionnaireDoubleClick() {
     maBoite.innerHTML = `<p class="text-center text-white fw-bold fs-2">Tu viens de double cliquer petit</p>`;
     maBoite.style.backgroundColor = "red";
     ajouterAnimation({
@@ -34,7 +34,7 @@ function doubleClick() {
     });
 }
 
-function mouseout() {
+function gestionnaireMouseout() {
     maBoite.innerHTML = `<p class="text-center text-white fw-bold fs-2">Tu viens d'enlever ta souris <br> Terrain neutre</p>`;
     maBoite.style.backgroundColor = "gray";
     ajouterAnimation({
@@ -43,7 +43,7 @@ function mouseout() {
     });
 }
 
-function clickDroit() {
+function gestionnaireClickDroit() {
     maBoite.innerHTML = `<p class="text-center text-white fw-bold fs-2">Tu as fais un clic droit</p>`;
     maBoite.style.backgroundColor = "orange";
     ajouterAnimation({
@@ -52,8 +52,8 @@ function clickDroit() {
     });
 }
 
-maBoite.addEventListener("mouseover", passerSouri);
-maBoite.addEventListener("dblclick", doubleClick);
-maBoite.addEventListener("click", click);
-maBoite.addEventListener("mouseout", mouseout);
-maBoite.addEventListener("contextmenu", clickDroit);
+maBoite.addEventListener("mouseover", gestionnaireMouseOver);
+maBoite.addEventListener("dblclick", gestionnaireDoubleClick);
+maBoite.addEventListener("click", gestionnaireClick);
+maBoite.addEventListener("mouseout", gestionnaireMouseout);
+maBoite.addEventListener("contextmenu", gestionnaireClickDroit);
